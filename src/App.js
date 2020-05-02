@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import Tasks from "./components/Tasks";
+import Footer from "./components/Footer";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTrash, faList } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTrash, faList);
 
 function App() {
+  const [task, setTask] = useState(""); // state to get task
+  const [tasks, setTasks] = useState([]); // state to store task
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Tasks tasks={tasks} setTasks={setTasks} />
+      <Form task={task} setTask={setTask} tasks={tasks} setTasks={setTasks} />
+      <Footer creator="Matis" />
+    </>
   );
 }
 
