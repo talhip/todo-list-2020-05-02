@@ -70,3 +70,39 @@ body {
 b {
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 24px;
+  }
+  .submit-button,
+  .field,
+  .tasks {
+    font-size: 18px;
+  }
+  .tasks {
+    margin-left: 1px;
+  }
+  .header {
+    padding: 15px;
+    margin: 1px;
+  }
+  .footer {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+  .form {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .tasks {
+    padding: 15px;
+  }
+  .submit-button,
+  .field {
+    margin-bottom: 15px;
+  }
+  .footer {
+    justify-content: left;
+  }
+}
