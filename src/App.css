@@ -61,14 +61,21 @@ body {
 .white {
   background-color: #ffffff;
 }
-.trash {
+.trash,
+.list,
+a:hover {
   color: #3b88fd;
 }
-.list {
-  color: #3b88fd;
-}
-b {
+a {
   font-weight: 700;
+  text-decoration: inherit;
+  color: inherit;
+}
+.alert {
+  color: #ff0000c4;
+  font-size: 40px;
+  margin-bottom: 15px;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -77,7 +84,8 @@ b {
   }
   .submit-button,
   .field,
-  .tasks {
+  .tasks,
+  .alert {
     font-size: 18px;
   }
   .tasks {
@@ -90,10 +98,12 @@ b {
   .footer {
     font-size: 11px;
     margin-left: 10px;
+    margin-top: 20px;
   }
-  .form {
+  .form,
+  .alert {
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: 25px;
   }
   .tasks {
     padding: 15px;
@@ -101,8 +111,5 @@ b {
   .submit-button,
   .field {
     margin-bottom: 15px;
-  }
-  .footer {
-    justify-content: left;
   }
 }

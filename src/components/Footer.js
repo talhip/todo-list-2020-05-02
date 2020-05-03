@@ -4,11 +4,17 @@ const Footer = (props) => {
   return (
     <div className="container footer">
       Made with&nbsp;
-      <b>React&nbsp;</b>
+      <a target="blank" href="https://fr.reactjs.org/">
+        React&nbsp;
+      </a>
       at&nbsp;
-      <b>Le Reacteur&nbsp;</b>
+      <a target="blank" href="https://www.lereacteur.io/">
+        Le Reacteur&nbsp;
+      </a>
       By&nbsp;
-      <b>{props.creator}</b>
+      <a target="blank" href="https://www.linkedin.com/in/matis-grinbaum/">
+        {props.creator}
+      </a>
     </div>
   );
 };

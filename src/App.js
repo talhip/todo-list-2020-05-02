@@ -12,12 +12,20 @@ library.add(faTrash, faList);
 function App() {
   const [task, setTask] = useState(""); // state to get task
   const [tasks, setTasks] = useState([]); // state to store task
+  const [empty, setEmpty] = useState(false); // state for empty field
 
   return (
     <>
       <Header />
       <Tasks tasks={tasks} setTasks={setTasks} />
-      <Form task={task} setTask={setTask} tasks={tasks} setTasks={setTasks} />
+      <Form
+        task={task}
+        setTask={setTask}
+        tasks={tasks}
+        setTasks={setTasks}
+        empty={empty}
+        setEmpty={setEmpty}
+      />
       <Footer creator="Matis" />
     </>
   );
